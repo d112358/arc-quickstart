@@ -31,11 +31,6 @@ public class BasicTeleOp extends CommandOpMode {
         fR.motor.setDirection(DcMotor.Direction.FORWARD);
         bR.motor.setDirection(DcMotor.Direction.FORWARD);
         bL.motor.setDirection(DcMotor.Direction.FORWARD);
-        //when motor speed are set to zero they should have a "FLOAT" behavior
-        fL.setZeroPowerBehavior(Motor.ZeroPowerBehavior.FLOAT);
-        fR.setZeroPowerBehavior(Motor.ZeroPowerBehavior.FLOAT);
-        bR.setZeroPowerBehavior(Motor.ZeroPowerBehavior.FLOAT);
-        bL.setZeroPowerBehavior(Motor.ZeroPowerBehavior.FLOAT);
         //initialize drive subsystem and drive command
         drive = new BasicMecanumDrive(fL,fR,bL,bR);
         driveC=new BasicMecanumDriveCommand(drive,controller::getLeftX,controller::getLeftY,controller::getRightX);
